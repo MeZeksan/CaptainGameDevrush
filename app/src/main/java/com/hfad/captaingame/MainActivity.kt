@@ -38,6 +38,8 @@ class MainActivity : ComponentActivity() {
     {
 
         //remember{} - запоминает что либо
+        // val treasuresFound by remember { mutableStateOf(0) } - больше не нужно обращаться через value
+        //treasureFound является самим по себе значением
         val treasuresFound = remember { mutableStateOf(0) }
         val direction = remember { mutableStateOf("North") }
         val stormOrTreasure = remember { mutableStateOf("") }
